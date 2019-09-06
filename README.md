@@ -40,7 +40,7 @@ This application is for a Tap Room website, which is meant to display many beer 
     ```
 
 ## Known Bugs
-* None at this time
+* The listed beers on the Brewers page should not be aligned to the bottom of their element. I'm not sure why they are aligned in such a way.
 
 ## Technologies Used
 * JavaScript, CSS, HTML, React
