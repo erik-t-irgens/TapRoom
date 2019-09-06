@@ -1,8 +1,9 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import SecondLink from './SecondLink';
+import Breweries from './Breweries';
 import HomePage from './HomePage';
 import Header from './Header';
+import Error404 from './Error404';
 
 function App(){
   return(
@@ -10,7 +11,9 @@ function App(){
       <Header/>
       <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route exact path='/secondlink' component={SecondLink} />
+        <Route exact path='/breweries' component={Breweries} />
+        <Route exact path='/breweries' component={SecondLink} />
+        <Route component={Error404} />
       </Switch>
     </div>
   );
