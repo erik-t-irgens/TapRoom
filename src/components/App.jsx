@@ -18,25 +18,25 @@ function App(){
         <Route exact path='/aslan' 
           render = {(props) => <Brewers 
             name = {Data()[0].name}
-            items = {Data()[0].beers[0]}
+            beers = {Data()[0].beers}
             isAuthed = {true}
           />}/>
         <Route exact path='/elysian' 
           render = {(props) => <Brewers 
             name = {Data()[1].name}
-            items = {Data()[1].beers}
+            beers = {Data()[1].beers}
             isAuthed = {true}
           />}/>
         <Route exact path='/redhook' 
           render = {(props) => <Brewers 
             name = {Data()[2].name}
-            items = {Data()[2].beers}
+            beers = {Data()[2].beers}
             isAuthed = {true}
           />}/>
         <Route exact path='/optimism' 
           render = {(props) => <Brewers 
             name = {Data()[3].name}
-            items = {Data()[3].beers}
+            beers = {Data()[3].beers}
             isAuthed = {true}
           />}/>
         <Route component={Error404} />
