@@ -16,6 +16,10 @@ This application is for a Tap Room website, which is meant to display many beer 
 | **User can visit individual brands' page for their beverages only** | Visit "/brands/{brand}" path | A list of brand's beverages will appear  |
 
 
+### Component Diagram and Pathing
+![Untitled Diagram](https://user-images.githubusercontent.com/49962295/64452329-fbd39800-d09a-11e9-8697-dc3a9725a437.jpg)
+
+
 ## Setup/Installation Requirements
 
 1. Clone this repository:
