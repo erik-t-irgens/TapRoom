@@ -1,16 +1,40 @@
+  
 import React from 'react';
-import Beer from './Beer';
+import Beers from './Beers';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-
-function Breweries(){
+function Brewers(props){
+    var titleStyle = () => {
+      return {
+        fontSize : "30px",
+      }    
+    }
+    var divStyle = () => {
+      return {
+        textAlign: "center",
+        fontSize: "20"
+      }
+    }
   return (
-    <div>
-      <p>second page</p>
+    <div style= {divStyle()}>
+      <Link style = {titleStyle()} to={`/${props.name}`}>{props.name}</Link><br></br> 
+      {props.beers.map((beer, index) =>
+        <Beers name={beer.name}
+          description={beer.description}
+          abv={beer.abv}
+          imgurl={beer.imgurl}
+          key={index}/>  
+      )}
     </div>
-    
   );
 }
 
-export default Breweries;
+Brewers.PropTypes= {
+  name: PropTypes.string.isRequired,
+  // imgurl: PropTypes.string,
+  Beers: PropTypes.array
+};
+
+
+export default Brewers;

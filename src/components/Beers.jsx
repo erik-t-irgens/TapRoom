@@ -29,16 +29,15 @@ function Beer(props){
     <div>
       <img style = {imgStyle()} src={props.imgurl} alt = {`img of ${props.name}`}/>
       <p>{props.name}</p>
-      <p>${props.price}</p>
+      <p>{props.description}</p>
     </div>
   );
 }
 
 Beer.PropTypes= {
   name: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   abv: PropTypes.string.isRequired,
-  brewer: PropTypes.string.isRequired,
   imgurl: PropTypes.string
 };
 
