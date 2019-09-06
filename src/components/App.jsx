@@ -5,7 +5,7 @@ import Header from './Header';
 import BrewersList from './BrewersList';
 import PropTypes from 'prop-types';
 import Data from './Data';
-import Seasons from './Seasons';
+import Brewers from './Breweries';
 import Error404 from './Error404';
 
 function App(){
@@ -16,25 +16,25 @@ function App(){
         <Route exact path='/' component={HomePage} />
         <Route exact path='/brewerslist' component={BrewersList} />
         <Route exact path='/aslan' 
-          render = {(props) => <Seasons 
+          render = {(props) => <Brewers 
             name = {Data()[0].name}
-            items = {Data()[0].beers}
+            items = {Data()[0].beers[0]}
             isAuthed = {true}
           />}/>
         <Route exact path='/elysian' 
-          render = {(props) => <Seasons 
+          render = {(props) => <Brewers 
             name = {Data()[1].name}
             items = {Data()[1].beers}
             isAuthed = {true}
           />}/>
         <Route exact path='/redhook' 
-          render = {(props) => <Seasons 
+          render = {(props) => <Brewers 
             name = {Data()[2].name}
             items = {Data()[2].beers}
             isAuthed = {true}
           />}/>
         <Route exact path='/optimism' 
-          render = {(props) => <Seasons 
+          render = {(props) => <Brewers 
             name = {Data()[3].name}
             items = {Data()[3].beers}
             isAuthed = {true}

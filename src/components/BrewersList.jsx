@@ -13,7 +13,8 @@ function BrewersList() {
   return (
     <div>
       {Data().map((brewer, index) =>
-        <Brewer name={brewer.name}
+        <Brewers name={brewer.name}
+          link={brewer.link}
           beers={brewer.beers}
           key={index}/>
                 

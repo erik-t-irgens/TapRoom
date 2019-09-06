@@ -6,8 +6,7 @@ function Header(){
     <div>
       <div id="nav-bar">
         <h1 id="nav-title"><Link to="/">The Tap Room</Link></h1> 
-        <Link to="/breweries"><button class="nav-button">Breweries</button></Link>
-        <Link to="/beers"><button class="nav-button">Beers</button></Link>
+        <Link to="/brewerslist"><button class="nav-button">Breweries</button></Link>
       </div>
     </div>
   );
