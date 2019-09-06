@@ -12,14 +12,17 @@ function Beer(props){
   var beerStyle = () => {
     return  { 
       border : '5px solid lightgray',
-      color : 'black',
+      borderRadius: '5',
+      color : 'white',
       width : '200px',
-      backgroundColor : 'darkgray',
+      backgroundColor : '#32a852',
       display : 'inline-block',
-      height: '200px',
       marginLeft : '5px',
       alignItems: 'center',
-      alignSelf: 'center'
+      alignSelf: 'center',
+      position: 'relative',
+      top: '0',
+      left: '0'
     };
   };
 
@@ -28,6 +31,7 @@ function Beer(props){
     <div style = {beerStyle()}>
       <img style = {imgStyle()} src={props.imgurl} alt = {`img of ${props.name}`}/>
       <p>{props.name}</p>
+      <p>{props.abv}</p>
       <p>{props.description}</p>
     </div>
   );
