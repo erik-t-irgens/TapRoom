@@ -16,7 +16,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterBeerList: Data.map(),
+      masterBeerList: Data(),
     };
     this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
   }
@@ -34,7 +34,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route exact path='/privatepolicy' component={PrivatePolicy} />
-          <Route exact path='/brewerslist' component={BrewersList} />
+          <Route exact path='/brewerslist' render={() => <BrewersList masterBeerList={this.state.masterBeerList} />} />
           <Route path='/newbeerform' render={() => <NewBeerForm onNewBeerCreation={this.handleAddingNewBeerToList} />} />
 
           <Route exact path='/aslan'

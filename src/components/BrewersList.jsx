@@ -1,23 +1,24 @@
 import React from 'react';
 import Brewers from './Breweries';
 import Data from './Data';
+import PropTypes from 'prop-types';
 
 
-function BrewersList() {
-  var BrewersStyle =() => {
+function BrewersList(props) {
+  var BrewersStyle = () => {
     return {
-           
+
     };
   };
 
   return (
     <div>
-      {Data().map((brewer, index) =>
+      {props.masterBeerList.map((brewer, index) =>
         <Brewers name={brewer.name}
           link={brewer.link}
           beers={brewer.beers}
-          key={index}/>
-                
+          key={index} />
+
       )}
     </div>
   );
