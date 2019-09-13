@@ -35,7 +35,7 @@ function NewBeerForm(props) {
     return (
         <div>
             <form style={formStyles()} onSubmit={handleNewBeerFormSubmission}>
-                <select style={inputStyles()} name="brewerIndex" id="brewerIndex">
+                <select style={inputStyles()} name="brewerIndex" id="brewerIndex" ref={(input) => { _brewerIndex = input; }}>
                     <option value="0">Select Brewery...</option>
                     <option value="0">Aslan Brewing Company</option>
                     <option value="1">Elysian Brewing Company</option>
@@ -56,6 +56,11 @@ function NewBeerForm(props) {
                     id='abv'
                     placeholder='ABV...'
                     ref={(input) => { _abv = input; }} /><br></br>
+                <input style={inputStyles()}
+                    type='text'
+                    id='imgurl'
+                    placeholder='Image URL...'
+                    ref={(input) => { _imgurl = input; }} /><br></br>
                 <button className='btn btn-outline-dark' type='submit'>Add Beer!</button>
             </form>
         </div>
