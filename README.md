@@ -19,7 +19,7 @@ This application is for a Tap Room website, which is meant to display many beer 
 
 
 ### Component Diagram and Pathing
-![Untitled Diagram](src/images/Untitled Diagram.png)
+![Untitled Diagram]((https://raw.githubusercontent.com/erik-t-irgens/TapHouse/src/images/ComponentTree.png)
 
 
 ## Setup/Installation Requirements
