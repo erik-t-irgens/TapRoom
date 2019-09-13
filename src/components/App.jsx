@@ -16,14 +16,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterBeerList: Data,
+      masterBeerList: Data.map(),
     };
     this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
   }
 
   handleAddingNewBeerToList(newBeer) {
     var newMasterBeerList = this.state.masterBeerList.slice();
-    newMasterBeerList[newBeer.brewerIndex].push(newBeer);
+    newMasterBeerList[newBeer.brewerIndex].beers.push(newBeer);
     this.setState({ masterBeerList: newMasterBeerList });
   }
 
