@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 function Beer(props){
   var imgStyle = () => {
     return  {
-      height: '100',
-      width : 'auto'
+      height: '10vw',
+      maxHeight: '180px'
     };
   };
 
@@ -14,21 +14,18 @@ function Beer(props){
       border : '5px solid lightgray',
       borderRadius: '5',
       color : 'white',
-      width : '200px',
-      backgroundColor : '#32a852',
+      width : '20vw',
+      minWidth: '250px',
       display : 'inline-block',
-      marginLeft : '5px',
-      alignItems: 'center',
-      alignSelf: 'center',
-      position: 'relative',
-      top: '0',
-      left: '0'
+      marginBottom: '40',
+      overflow: 'auto',
+      height: '500'
     };
   };
 
   
   return (
-    <div style = {beerStyle()}>
+    <div style = {beerStyle()} className="card bg-dark">
       <img style = {imgStyle()} src={props.imgurl} alt = {`img of ${props.name}`}/>
       <p>{props.name}</p>
       <p>{props.abv}</p>

@@ -1,13 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 function Header(){
+
+  var headerStyle = () => {
+    return {
+      textAlign: 'center'
+    };
+  };
+
+  var headerButtonStyle = () => {
+    return {
+      textAlign: 'center',
+      fontSize: '36'
+    };
+  };
+
   return (
     <div>
       
-      <div id="nav-bar">
-        <h1 id="nav-title"><Link to="/">The Tap Room</Link></h1> 
-        <Link to="/brewerslist"><button class="nav-button">Breweries</button></Link>
+      <div style={headerStyle()} className='alert alert-success'>
+        <Link to="/"><button style={headerButtonStyle()} className='btn btn-outline-dark btn-lg'>The Tap Room</button></Link><hr></hr> 
+        <Link to="/brewerslist"><button className="btn btn-dark">Breweries</button></Link>
       </div>
     </div>
   );
