@@ -15,7 +15,7 @@ function NewBeerForm(props) {
         _description.value = '';
         _abv.value = '';
         _imgurl.value = '';
-
+        _brewerIndex.value = '';
     }
 
     var formStyles = () => {

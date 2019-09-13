@@ -23,7 +23,7 @@ class App extends React.Component {
 
   handleAddingNewBeerToList(newBeer) {
     var newMasterBeerList = this.state.masterBeerList.slice();
-
+    newMasterBeerList[newBeer.brewerIndex].push(newBeer);
     this.setState({ masterBeerList: newMasterBeerList });
   }
 
