@@ -20,7 +20,7 @@ function NewBeerForm(props) {
 
     var formStyles = () => {
         return {
-            width: '100vw',
+            width: '100%',
             textAlign: 'center'
         }
     }
@@ -32,9 +32,21 @@ function NewBeerForm(props) {
         }
     }
 
+    var containerStyle = () => {
+        return {
+            backgroundColor: '#616161',
+            color: 'white',
+            fontWeight: 'bold',
+            borderRadius: '5',
+            boxShadow: '2px 2px 5px black',
+            height: '700'
+        }
+    }
+
     return (
-        <div>
+        <div className='container' style={containerStyle()}>
             <form style={formStyles()} onSubmit={handleNewBeerFormSubmission}>
+                <label for="brewerIndex">Select which brewery to add to</label><br />
                 <select style={inputStyles()} name="brewerIndex" id="brewerIndex" ref={(input) => { _brewerIndex = input; }}>
                     <option value="0">Select Brewery...</option>
                     <option value="0">Aslan Brewing Company</option>
@@ -42,20 +54,24 @@ function NewBeerForm(props) {
                     <option value="2">Redhook Brewing Company</option>
                     <option value="3">Optimism Brewing Company</option>
                 </select><br></br>
+                <label for="name">Name of the beer</label><br />
                 <input style={inputStyles()}
                     type='text'
                     id='name'
                     placeholder='Name...'
                     ref={(input) => { _name = input; }} /><br></br>
+                <label for="description">Describe the beer</label><br />
                 <textarea style={inputStyles()}
                     type='text'
                     id='description'
                     placeholder='Description...'
                     ref={(textarea) => { _description = textarea; }} /><br></br>
+                <label for="abv">ABV of the beer</label><br />
                 <input style={inputStyles()}
                     id='abv'
                     placeholder='ABV...'
                     ref={(input) => { _abv = input; }} /><br></br>
+                <label for="imgurl">Link to an image of the beer</label><br />
                 <input style={inputStyles()}
                     type='text'
                     id='imgurl'

@@ -12,14 +12,16 @@ function Footer() {
       color: 'white',
       textAlign: 'center',
       backgroundColor: 'black',
-      opacity: '0.7'
+      opacity: '0.7',
+      fontSize: '10'
     };
   };
 
   return (
     <div>
       <div style={footerStyle()}>
-        <p>&#169;Tap Room - 2019 - <span id="datetime"></span> | <Link to="/privatepolicy"><button className="btn btn-sm btn-outline-light">Private Policy</button></Link></p>
+        <br />
+        <p>&#169;Tap Room - 2019 - <span id="datetime"></span> | <Link to="/privatepolicy">Private Policy</Link></p>
       </div>
     </div>
   );

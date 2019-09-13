@@ -8,6 +8,7 @@ function Brewers(props) {
   var titleStyle = () => {
     return {
       fontSize: '30px',
+
     };
   };
   var divStyle = () => {
@@ -18,7 +19,7 @@ function Brewers(props) {
   };
   return (
     <div style={divStyle()}>
-      <Link style={titleStyle()} to={`/${props.link}`}>{props.name}</Link><br></br>
+      <Link style={titleStyle()} to={`/${props.link}`}><button className='btn btn-outline-dark btn-lg'>{props.name}</button></Link><br></br>
       {props.beers.map((beer, index) =>
         <Beers name={beer.name}
           description={beer.description}

@@ -39,26 +39,26 @@ class App extends React.Component {
 
           <Route exact path='/aslan'
             render={(props) => <Brewers
-              name={Data()[0].name}
-              beers={Data()[0].beers}
+              name={this.state.masterBeerList[0].name}
+              beers={this.state.masterBeerList[0].beers}
               isAuthed={true}
             />} />
           <Route exact path='/elysian'
             render={(props) => <Brewers
-              name={Data()[1].name}
-              beers={Data()[1].beers}
+              name={this.state.masterBeerList[1].name}
+              beers={this.state.masterBeerList[1].beers}
               isAuthed={true}
             />} />
           <Route exact path='/redhook'
             render={(props) => <Brewers
-              name={Data()[2].name}
-              beers={Data()[2].beers}
+              name={this.state.masterBeerList[2].name}
+              beers={this.state.masterBeerList[2].beers}
               isAuthed={true}
             />} />
           <Route exact path='/optimism'
             render={(props) => <Brewers
-              name={Data()[3].name}
-              beers={Data()[3].beers}
+              name={this.state.masterBeerList[3].name}
+              beers={this.state.masterBeerList[3].beers}
               isAuthed={true}
             />} />
           <Route component={Error404} />
