@@ -1,14 +1,14 @@
-  
+
 import React from 'react';
 import Beers from './Beers';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-function Brewers(props){
+function Brewers(props) {
   var titleStyle = () => {
     return {
-      fontSize : '30px',
-    };    
+      fontSize: '30px',
+    };
   };
   var divStyle = () => {
     return {
@@ -17,20 +17,20 @@ function Brewers(props){
     };
   };
   return (
-    <div style= {divStyle()}>
-      <Link style = {titleStyle()} to={`/${props.link}`}>{props.name}</Link><br></br> 
+    <div style={divStyle()}>
+      <Link style={titleStyle()} to={`/${props.link}`}>{props.name}</Link><br></br>
       {props.beers.map((beer, index) =>
         <Beers name={beer.name}
           description={beer.description}
           abv={beer.abv}
           imgurl={beer.imgurl}
-          key={index}/>  
+          key={index} />
       )}
     </div>
   );
 }
 
-Brewers.PropTypes= {
+Brewers.PropTypes = {
   name: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   // imgurl: PropTypes.string,

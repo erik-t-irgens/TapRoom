@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Footer(){
+function Footer() {
 
   var footerStyle = () => {
     return {
@@ -14,12 +14,12 @@ function Footer(){
       backgroundColor: 'black',
       opacity: '0.7'
     };
-};
+  };
 
   return (
     <div>
       <div style={footerStyle()}>
-        <p>&#169;Tap Room - 2019 - <span id="datetime"></span> | <Link to="/privatepolicy"><button class="nav-button">Private Policy</button></Link></p>
+        <p>&#169;Tap Room - 2019 - <span id="datetime"></span> | <Link to="/privatepolicy"><button className="btn btn-sm btn-outline-light">Private Policy</button></Link></p>
       </div>
     </div>
   );
